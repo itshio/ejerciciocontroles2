@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Spinner spTest;
-    RadioGroup srRespuesta;
+    RadioGroup sgRespuesta;
     CheckBox cbRepetida;
     Button btnaceptar;
 
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         //Identificacion de vistas
 
         spTest = (Spinner)findViewById(R.id.sp_principal);
-        srRespuesta= (RadioGroup)findViewById(R.id.rgroup_respuestas);
+        sgRespuesta= (RadioGroup)findViewById(R.id.rgroup_respuestas);
         cbRepetida= (CheckBox)findViewById(R.id.cbox_principal);
         btnaceptar= (Button)findViewById(R.id.btn_aceptar);
 
@@ -67,6 +68,40 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickaceptar (View view){
+
+
+        //Obtenemos la id, del Radiobutton seleccionado dentro del Radiogroup
+
+        int idRadio = sgRespuesta.getCheckedRadioButtonId();
+
+        if (idRadio == -1){
+            Toast.makeText(this,"Debes selccionar un tipo test",Toast.LENGTH_LONG).show();
+        }else{
+
+            //Creamos u objeto Radiobutton desde la id recogida
+            RadioButton radioButtonSeleccionado =(RadioButton)findViewById(idRadio);
+            String textoradioseleccionado = radioButtonSeleccionado.getText().toString();
+
+
+            //Comprobar si el checkbox esta seleccionado
+
+            boolean esRepetida=false;
+            if(cbRepetida.isChecked()){
+                esRepetida=true;
+            }
+
+            if(esRepetida){
+                Toast.makeText(this,"Esta pregunta ya la has contestado",Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(this,"Has seleccionado "+textoradioseleccionado,Toast.LENGTH_LONG).show();
+            }
+
+        }
+
+
+
+
+
 
 
     }
