@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ejerciciocontroles2.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@color/CornflowerBlue"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tipotest"
+            android:textSize="@dimen/d20"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/sp_principal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_vertipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clickvertipo"
+            android:text="@string/ver_tipo" />
+
+        <Button
+            android:id="@+id/btn_aceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clickaceptar"
+            android:enabled="false"
+            android:text="@string/aceptar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_pregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿A cuantos km/h podemos circular por una autovia?"
+            android:layout_marginTop="@dimen/d25"
+            android:textSize="@dimen/d25"
+            android:layout_marginBottom="@dimen/d10"
+            android:textAlignment="center" />
+
+        <RadioGroup
+            android:id="@+id/rgroup_respuestas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/d25"
+            android:layout_marginTop="@dimen/d30">
+
+            <RadioButton
+                android:id="@+id/radiobtn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/respuesta_1"
+                android:textSize="@dimen/d20" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/respuesta_2"
+                android:textSize="@dimen/d20" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/respuesta_3"
+                android:textSize="@dimen/d20" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <CheckBox
+            android:id="@+id/cbox_principal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d25"
+            android:textSize="@dimen/d15"
+            android:text="@string/checkbox" />
+
+
+    </RelativeLayout>
+</LinearLayout>

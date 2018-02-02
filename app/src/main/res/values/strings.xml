@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ejerciciocontroles2</string>
+    <string name= "ver_tipo">Ver tipo</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="respuesta_1">A 90km/h</string>
+    <string name="respuesta_2">A 120km/h</string>
+    <string name="respuesta_3">No hay límite de velocidad</string>
+    <string name="tipotest">Tipo de Test</string>
+    <string name="checkbox">Esta pregunta esta repetida</string>
+
+</resources>
